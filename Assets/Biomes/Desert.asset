@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50be39ecf8064544194dea614ccdf1c3, type: 3}
+  m_Name: Desert
+  m_EditorClassIdentifier: 
+  spriteWidth: 256
+  spriteHeight: 128
+  spriteScale: 1
+  terrainNoiseFactor: 0.34
+  entitiesNoiseFactor: 0.6
+  mountainFactor: 5
+  mountainProbablity: 25
+  terrains:
+  - name: Sand Tile
+    sprite: {fileID: 21300006, guid: f599e171b4c227f44b78e07994fc544b, type: 3}
+    probablity: 30
+    positiveBias: 15
+    negetiveBias: 5
+    gridAt: 0.78
+    terrainBehaviour:
+    - name: Sand Tile
+      isAllowed: 0
+    - name: Sand
+      isAllowed: 0
+    entitiesBehaviour:
+    - name: Leaves
+      isAllowed: 1
+    - name: Cactus
+      isAllowed: 1
+    - name: Cactus With Leaves
+      isAllowed: 0
+    - name: Cutted Cactus
+      isAllowed: 0
+    - name: None
+      isAllowed: 1
+  - name: Sand
+    sprite: {fileID: 21300004, guid: f599e171b4c227f44b78e07994fc544b, type: 3}
+    probablity: 80
+    positiveBias: 5
+    negetiveBias: 5
+    gridAt: 1.25
+    terrainBehaviour:
+    - name: Sand Tile
+      isAllowed: 0
+    - name: Sand
+      isAllowed: 1
+    entitiesBehaviour:
+    - name: Leaves
+      isAllowed: 1
+    - name: Cactus
+      isAllowed: 1
+    - name: Cactus With Leaves
+      isAllowed: 0
+    - name: Cutted Cactus
+      isAllowed: 0
+    - name: None
+      isAllowed: 1
+  entities:
+  - name: Leaves
+    sprite: {fileID: 21300008, guid: a215f282d5a30c74c843e7546c2ce618, type: 3}
+    probablity: 5
+    positiveBias: 5
+    negetiveBias: 5
+  - name: Cactus
+    sprite: {fileID: 21300010, guid: a215f282d5a30c74c843e7546c2ce618, type: 3}
+    probablity: 5
+    positiveBias: 5
+    negetiveBias: 5
+  - name: Cactus With Leaves
+    sprite: {fileID: 21300012, guid: a215f282d5a30c74c843e7546c2ce618, type: 3}
+    probablity: 5
+    positiveBias: 5
+    negetiveBias: 5
+  - name: Cutted Cactus
+    sprite: {fileID: 21300014, guid: a215f282d5a30c74c843e7546c2ce618, type: 3}
+    probablity: 5
+    positiveBias: 5
+    negetiveBias: 5
+  - name: None
+    sprite: {fileID: 0}
+    probablity: 90
+    positiveBias: 15
+    negetiveBias: 5

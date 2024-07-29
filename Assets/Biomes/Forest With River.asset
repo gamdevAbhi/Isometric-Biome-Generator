@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50be39ecf8064544194dea614ccdf1c3, type: 3}
+  m_Name: Forest With River
+  m_EditorClassIdentifier: 
+  spriteWidth: 256
+  spriteHeight: 128
+  spriteScale: 1
+  terrainNoiseFactor: 0.34
+  entitiesNoiseFactor: 0.25
+  mountainFactor: 5
+  mountainProbablity: 50
+  terrains:
+  - name: Grass
+    sprite: {fileID: 21300000, guid: f599e171b4c227f44b78e07994fc544b, type: 3}
+    probablity: 80
+    positiveBias: 5
+    negetiveBias: 2
+    gridAt: 1.25
+    terrainBehaviour:
+    - name: Grass
+      isAllowed: 1
+    - name: Water
+      isAllowed: 0
+    entitiesBehaviour:
+    - name: Leaves
+      isAllowed: 1
+    - name: Tree
+      isAllowed: 1
+    - name: Tree With Leaves
+      isAllowed: 1
+    - name: Cutted Tree
+      isAllowed: 1
+    - name: None
+      isAllowed: 1
+  - name: Water
+    sprite: {fileID: 21300012, guid: f599e171b4c227f44b78e07994fc544b, type: 3}
+    probablity: 50
+    positiveBias: 15
+    negetiveBias: 4
+    gridAt: 0.84
+    terrainBehaviour:
+    - name: Grass
+      isAllowed: 0
+    - name: Water
+      isAllowed: 0
+    entitiesBehaviour:
+    - name: Leaves
+      isAllowed: 0
+    - name: Tree
+      isAllowed: 0
+    - name: Tree With Leaves
+      isAllowed: 0
+    - name: Cutted Tree
+      isAllowed: 0
+    - name: None
+      isAllowed: 0
+  entities:
+  - name: Leaves
+    sprite: {fileID: 21300000, guid: a215f282d5a30c74c843e7546c2ce618, type: 3}
+    probablity: 15
+    positiveBias: 5
+    negetiveBias: 5
+  - name: Tree
+    sprite: {fileID: 21300002, guid: a215f282d5a30c74c843e7546c2ce618, type: 3}
+    probablity: 15
+    positiveBias: 8
+    negetiveBias: 4
+  - name: Tree With Leaves
+    sprite: {fileID: 21300004, guid: a215f282d5a30c74c843e7546c2ce618, type: 3}
+    probablity: 80
+    positiveBias: 15
+    negetiveBias: 5
+  - name: Cutted Tree
+    sprite: {fileID: 21300006, guid: a215f282d5a30c74c843e7546c2ce618, type: 3}
+    probablity: 50
+    positiveBias: 5
+    negetiveBias: 5
+  - name: None
+    sprite: {fileID: 0}
+    probablity: 1
+    positiveBias: 1
+    negetiveBias: 1
