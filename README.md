@@ -6,7 +6,7 @@ Available On - Windows, Android
 
 How It Procedurally Generate Biomes
 
-- At first It create a height grid using jagged array (multidimensional array can also be used) for creating mountains (twicking can be done through biome scriptable object)
+- At first It create a height grid using jagged array (multidimensional array can also be used) for creating mountains (tweaking can be done through biome scriptable object)
 
 - Then it creates the world using my modified version of wave function collapse algorithm based on the terrain relations. at this point it contains noises.
 
@@ -20,4 +20,4 @@ How It Procedurally Generate Biomes
 
 - as it is 2d sorting is important so for that sorting is done.
 
-- I have also created different perspective view for isometric where each shows the world in different angle in realtime. but it can not be accessed the build file. To access it please download the unity project.
+- I have also created different perspective view for isometric where each shows the world in different angle in real-time. but it can not be accessed the build file. To access it please download the unity project.
